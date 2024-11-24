@@ -1,0 +1,136 @@
+/* Center the form and table on the page */
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #2196f3, #bbdefb); /* Vibrant gradient background in blue shades */
+  font-family: 'Roboto', sans-serif; /* A modern font */
+}
+
+/* Style the form field */
+mat-form-field {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft border shadow */
+}
+
+mat-form-field .mat-form-field-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1e88e5; /* Vibrant blue color */
+}
+
+mat-form-field .mat-input-element {
+  font-size: 1rem;
+  padding: 0.75rem;
+  color: #333;
+}
+
+/* Focused style for form input */
+mat-form-field.mat-focused .mat-form-field-label {
+  color: #1565c0; /* Darker shade for focused label */
+  font-weight: bold;
+}
+
+/* Style the search button */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #1e88e5; /* Vibrant blue color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem; /* Add margin to separate from the form field */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #1565c0; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Add some spacing between the form and the table */
+mat-form-field + table {
+  margin-top: 2rem;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhance shadow for depth */
+  overflow: hidden;
+  border-collapse: collapse;
+  padding: 1.5rem; /* Add some padding to the table container */
+}
+
+/* Style the table header */
+th.mat-header-cell {
+  background: linear-gradient(135deg, #3f51b5, #1a237e); /* Gradient header */
+  color: white;
+  font-weight: bold;
+  padding: 1.2rem;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Style the table rows */
+tr.mat-row {
+  transition: all 0.3s ease; /* Smooth transition for hover on rows */
+}
+
+/* Style the rows with odd IDs */
+tr.mat-row:nth-child(odd) td.mat-cell:first-child {
+  background-color: #e0f7fa; /* Light green background for odd ID rows */
+}
+
+tr.mat-row:nth-child(even) {
+  background-color: #ffffff; /* White background for even rows */
+}
+
+tr.mat-row:hover {
+  background-color: #bbdefb;
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+tr.odd-id {
+  background-color: #e8f5e9; /* Light green background */
+}
+
+/* Style the table cells */
+td.mat-cell {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Style the details link */
+a {
+  color: #1e88e5;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+a:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+/* Ensure the table doesn't go beyond the container */
+table {
+  width: 100%;
+  table-layout: fixed;
+}

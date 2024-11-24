@@ -1,0 +1,99 @@
+/* Center the form on the page */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2196f3, #bbdefb); /* Vibrant gradient background in blue shades */
+    font-family: 'Roboto', sans-serif; /* A modern font */
+}
+
+/* Style the form container */
+form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Larger shadow for depth */
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease; /* Smooth hover effect for the form */
+}
+
+form:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+/* Style the form fields */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 1.5rem; /* Increased margin for better spacing */
+}
+
+mat-form-field .mat-form-field-label {
+    font-size: 1.1rem;
+    color: #1e88e5; /* Vibrant blue color */
+    font-weight: 500;
+}
+
+mat-form-field .mat-input-element {
+    font-size: 1rem;
+    padding: 0.75rem;
+    color: #333;
+}
+
+/* Style the form field focus state */
+mat-form-field.mat-focused .mat-form-field-label {
+    color: #1565c0; /* Darker shade for focused label */
+    font-weight: bold;
+}
+
+/* Style the submit button */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #1e88e5; /* Vibrant blue color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Add some margin to the button */
+button:focus {
+    outline: none;
+}
+
+/* Style for the form title or heading */
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1e88e5;
+}
+
+/* Add some padding around the form */
+form {
+    padding: 2rem 2.5rem; /* More space on the sides */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 480px) {
+    form {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem; /* Adjust button font size for smaller screens */
+    }
+}

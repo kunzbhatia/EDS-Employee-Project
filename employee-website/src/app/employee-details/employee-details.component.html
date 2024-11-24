@@ -1,0 +1,11 @@
+<div *ngIf="employee" class="container">
+  <h2 appHighlight>{{ employee.name }}</h2>
+  <div class="details">
+    <p><span class="label">Salary:</span> <span class="value">{{ employee.salary | currency:'USD' }}</span></p>
+    <p><span class="label">Age:</span> <span class="value">{{ employee.age | age }}</span></p>
+    <p><span class="label">Email:</span> <span class="value">{{ employee.email }}</span></p>
+  </div>
+</div>
+<div *ngIf="!employee" class="container">
+  <h2>Employee not found</h2>
+</div>
